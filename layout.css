@@ -1,0 +1,316 @@
+/*Here's JUST THE COLORS AND DECOR, for you to customize to your aesthetic taste.*/
+
+:root {
+    --main-color: lightslategray;
+    --light-color: #f5f5f5;
+    --mediumlight-color: #dcdcdc;
+    --medium-color: #aab2bb;
+    --dark-color: #1b2136;
+}
+
+/*"Main color" = background & scrollbar.
+"Light-color" = links.
+"Mediumlight-color" = links on hover.
+"Medium-color" = background of sidebar boxes.
+"Dark-color" = text, borders, and scrollbar background.*/
+
+ul {
+    list-style-type: "✦ ";
+}
+/*This is the bullet point in lists.*/
+
+i,
+em {
+    font-family: 'WindSong','Vivaldi',cursive;
+    font-size: 1.5em;
+}
+/*This makes italicized text cursive and a bit bigger so it's legible. It's a bit silly, so delete it if you want it to be normal italics.*/
+
+
+h2::before,
+h3::before {
+    content: "⁎*☆ ";
+}
+
+h3::after {
+    content: " ☆*⁎"
+}
+
+/* Uncomment this if you want the layout to be centered instead of on the left side of the page:*/
+
+#header, .container, .footer, h1 {margin:auto;}
+
+/*And here's the rest of the layout. You can fuck with it however you want, too.*/
+
+*,
+html,
+body {
+    cursor: crosshair;
+}
+
+* {
+    box-sizing: border-box;
+    scrollbar-width: thin;
+    scrollbar-color: var(--main-color) var(--dark-color);
+}
+
+body {
+    background-color: var(--main-color);
+    font-family: 'MS UI Gothic', Arial, sans-serif;
+    font-size:10pt;
+    height:100%;
+    margin:0;
+    background-image:url(/img/lace2.png);
+    background-color:var(--main-color);
+    background-size: auto 20vh;
+    background-position-y: top;
+    background-repeat:repeat-x;
+    background-attachment:fixed;
+}
+
+::selection {
+    background: var(--dark-color);
+    color: var(--light-color);
+}
+
+h1 {
+    letter-spacing: 15px;
+    font-size: 33pt;
+    width: 70vw;
+    padding: 5px;
+    margin-top: -15px;
+    margin-bottom: -12px;
+    /* border: 1px blue solid; */
+    text-align: center;
+    max-width: max-content;
+}
+
+h2 {
+    letter-spacing: 10px;
+}
+
+h3 {
+    margin: 0;
+    font-optical-sizing: auto;
+}
+
+
+u {
+    text-decoration: dotted underline 1px
+}
+
+a {
+    font-weight: bold;
+    color: var(--light-color);
+    text-decoration: dotted 1px underline;
+}
+
+a:focus,
+a:hover {
+    color: var(--mediumlight-color);
+    font-size: unset;
+}
+
+ul {
+    text-align: left;
+    padding-left: 15px;
+    padding-right: 0;
+    margin: 0;
+    line-height: 1.2;
+    /* border: 1px green solid; */
+}
+
+#header {
+    width: 70vw;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px yellowgreen solid; */
+}
+
+#header img {
+    border: 1px var(--dark-color) solid;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.container {
+    width: 80vw;
+    display: flex;
+    /* justify-content: space-between; */
+    align-content: center;
+    border: 1px solid var(--dark-color);
+    margin-top: 0px;
+    max-width: max-content;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+.sidebar {
+    width: 30vw;
+    padding: 10px;
+    gap: 10px;
+    display: flex;
+    font-size: small;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    max-width: max-content;
+}
+
+.sidebar img {
+    max-width: max-content;
+}
+
+.sidebar p {margin-top:2px;
+margin-bottom:2px;}
+
+.sidebar.left{
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebarbox {
+    width: 10vw;
+    max-width: auto;
+    padding: 1%;
+    background-color: var(--medium-color);
+    max-height: auto;
+    overflow: hidden;
+    text-align: center;
+    border: 1px solid var(--dark-color);
+}
+
+.main {
+    width: 70vw;
+    padding: 10px;
+    border-left: 1px solid var(--dark-color);
+    border-right: 1px solid var(--dark-color);
+    text-align: justify;
+    line-height:1;
+}
+
+.main a::after {
+    content: "»";
+    font-size: smaller;
+    font-weight: normal;
+}
+
+.main a::before {
+    content: "«";
+    font-size: smaller;
+    font-weight: normal;
+}
+
+.footer {
+    width: 70vw;
+    text-align: center;
+    font-size: smaller;
+}
+
+#profilepic {
+    width: 8rem;
+    height: 8rem;
+    margin: auto;
+    margin-bottom: 10px;
+    margin-top:10px;
+    outline: var(--dark-color) 1px solid;
+    outline-offset: 6px;
+}
+
+.music {
+    font-size: 9pt;
+    overflow: hidden;
+}
+
+.marquee span {
+    width: max-content;
+    display: inline-block;
+    animation: marquee 10s linear infinite;
+    padding-left: 100%;
+}
+
+.marquee span:hover {
+    animation-play-state: paused
+}
+
+@keyframes marquee {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(-100%, 0);
+    }
+}
+
+
+/*Calendar stuff*/
+
+.calendar-container {
+    background-color: var(--medium-color);
+    width: 15vw;
+    border-radius: 2px;
+    border: 1px var(--dark-color) solid;
+}
+
+.calendar-container header {
+    border-bottom: 1px var(--dark-color) solid;
+    padding: 2px;
+}
+
+.calendar-container>header>p {
+    margin: 0;
+    text-align: center;
+}
+
+header .calendar-current-date {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.calendar-body {
+    padding: 5px;
+}
+
+.calendar-body ul {
+    list-style: none;
+    flex-wrap: wrap;
+    display: flex;
+    text-align: center;
+    border: 1px var(--dark-color) solid;
+    margin-top: 0;
+    padding-left: 0;
+}
+
+.calendar-body .calendar-dates {
+    margin-bottom: 0px;
+}
+
+.calendar-body li {
+    width: calc(100% / 7);
+    font-size: 0.8rem;
+    color: #414141;
+}
+
+.calendar-body .calendar-weekdays li {
+    cursor: default;
+    font-weight: 500;
+}
+
+.calendar-body .calendar-dates li {
+    margin-bottom: 3px;
+    margin-top: 3px;
+}
+
+.calendar-dates li.inactive {
+    color: #dcdcdc;
+}
+
+.calendar-dates li.active {
+    font-weight: bolder;
+    text-decoration: underline wavy 1px;
+}
