@@ -60,7 +60,7 @@ body {
     font-size:10pt;
     height:100%;
     margin:0;
-    background-image:url(/img/lace2.png);
+    background-image:url(img/lace2.png);
     background-color:var(--main-color);
     background-size: auto 20vh;
     background-position-y: top;
