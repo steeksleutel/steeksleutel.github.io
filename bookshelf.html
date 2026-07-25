@@ -23,6 +23,11 @@
 
     document.addEventListener('DOMContentLoaded', function() {
     // Define an array of items
+    const colors =['042A2B', '5EB1BF', '9A879D', '7A3B69', '563440', 'A18276',
+                 'B9A44C', 'AA7DCE', '7B2D26', '54457F', '967AA1', '192A51',
+                '0CA4A5', 'BB7E5D', '06908F', '0892A5', 'B80C09', 'BB6B00',
+            '99AA4B', '6AB143', 'D1462F', '5A5A66', '90A583', '0A5685']
+
     const items = [
     { title: 'Drive Your Plow Over The Bones Of The Dead', author: 'Olga Tokarczuk' },
     { title: 'The little prince', author: 'Antoine de Saint-Exupéry' },
@@ -45,7 +50,11 @@
         // Create a new div for this item
         const itemDiv = document.createElement('div');
         itemDiv.className = 'book'; // book class for styling
-        itemDiv.style.backgroundColor = 'lightblue';
+
+        // get the index of the first item in the color list
+        let randomColor = Math.floor((Math.random() * colors.length) + 1);
+        const color = colors[randomColor];
+        itemDiv.style.backgroundColor = `#${color}`;
 
         // Create a paragraph for the name
         const titleParagraph = document.createElement('p');

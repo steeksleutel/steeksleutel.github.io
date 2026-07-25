@@ -51,7 +51,7 @@ body {
     background-position-y: top;
     background-repeat:repeat-x;
     background-attachment:fixed;
-    outline: cyan 1px solid;
+    /* outline: cyan 1px solid; */
 
     display: flex;
     flex-flow: column nowrap;
@@ -64,10 +64,10 @@ body {
     display: flex;
     margin-top: 1%;
     margin-bottom: 2%;
-    border: 1px solid var(--dark-color);
+    /* border: 1px solid var(--dark-color); */
     flex-flow: column nowrap;
     align-items: center;
-    outline: 1px magenta solid;
+    /* outline: 1px magenta solid; */
 }
 
 .container.title{
@@ -84,15 +84,18 @@ body {
     justify-content: space-between;
     align-items: center;
     flex-wrap: nowrap;
+    color: var(--light-color);
+
 
 }
 
 #author{
     font-size: 2vmin;
+
     min-width: fit-content;
     text-align: right;
     margin: 2%;
-    outline: yellow 1px solid;
+    /* outline: yellow 1px solid; */
 }
 
 #title{
@@ -100,5 +103,5 @@ body {
     min-width: fit-content;
     text-align: left;
     padding-right: 2vw;
-    outline: 1px orange solid;
+    /* outline: 1px orange solid; */
 }
