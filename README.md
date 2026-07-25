@@ -1,3 +1,9 @@
 # steeksleutel.github.io
 
-Will this be visible on the github page?
+My digital collection of things.
+
+Collections on display:
+- nailpolish
+- books
+
+Note: not mobile compatible at the moment. Working on it...
