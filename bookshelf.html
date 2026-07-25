@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CoT - bookshelf</title>
+    <link rel="icon" type="image/x-icon" href="img/chocobar.png">
+
+    <link href="bookshelf.css" rel="stylesheet" type="text/css" media="all">
+
+  </head>
+  <body>
+      <div class="container title">
+          <h1>bookshelf</h1>
+      </div>
+    <div class ="container" id="itemList"></div>
+
+  </body>
+</html>
+<script>
+
+    document.addEventListener('DOMContentLoaded', function() {
+    // Define an array of items
+    const items = [
+    { title: 'Drive Your Plow Over The Bones Of The Dead', author: 'Olga Tokarczuk' },
+    { title: 'The little prince', author: 'Antoine de Saint-Exupéry' },
+    { title: 'Lessons in Chemistry', author: 'Bonnie Garmus' },
+    { title: 'A Date with Death', author: 'Julia Chapman' },
+    { title: 'The Thursday Murder Club', author: 'Richard Osman' },
+    { title: 'The Man Who Died Twice', author: 'Richard Osman' },
+    { title: 'The Bullet That Missed', author: 'Richard Osman' },
+    { title: 'The Last Devil to Die', author: 'Richard Osman' },
+    { title: 'The Impossible Fortune', author: 'Richard Osman' },
+    // Add more items as needed
+    ];
+
+    // Select the div where items will be displayed
+    const itemList = document.getElementById('itemList');
+
+    // Loop through each item and append it to the div
+    items.forEach(function(item) {
+
+        // Create a new div for this item
+        const itemDiv = document.createElement('div');
+        itemDiv.className = 'book'; // book class for styling
+        itemDiv.style.backgroundColor = 'lightblue';
+
+        // Create a paragraph for the name
+        const titleParagraph = document.createElement('p');
+        titleParagraph.textContent = `${item.title}`;
+        titleParagraph.id = 'title';
+        itemDiv.appendChild(titleParagraph);
+
+        // Create a paragraph for the description
+        const authorParagraph = document.createElement('p');
+        authorParagraph.textContent = `${item.author}`;
+        authorParagraph.id = "author";
+        itemDiv.appendChild(authorParagraph);
+
+        // Append the item div to the itemList div
+        itemList.appendChild(itemDiv);
+        });
+    });
+</script>

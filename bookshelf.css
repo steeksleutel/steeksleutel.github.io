@@ -1,0 +1,104 @@
+:root {
+    --main-color: lightslategray;
+    --light-color: #f5f5f5;
+    --mediumlight-color: #dcdcdc;
+    --medium-color: #aab2bb;
+    --dark-color: #1b2136;
+}
+
+i, em {
+    font-family: 'WindSong','Vivaldi',cursive;
+    font-size: 1.5em;
+}
+
+*, html, body {
+    cursor: crosshair;
+}
+
+* {
+    box-sizing: border-box;
+    scrollbar-width: thin;
+    scrollbar-color: var(--main-color) var(--dark-color);
+}
+
+h1::before {
+    content: "⁎*☆ ";
+}
+
+h1::after {
+    content: " ☆*⁎"
+}
+
+h1 {
+    letter-spacing: 1vmin;
+    font-size: 5.9vmin;
+    padding: 5px;
+    margin-top: -15px;
+    margin-bottom: -12px;
+    text-align: center;
+    max-width: max-content;
+}
+
+body {
+    background-color: var(--main-color);
+    font-family: 'MS UI Gothic', Arial, sans-serif;
+    font-size:3.0vh;
+    height:100%;
+    margin:1%;
+    background-image:url(img/lace2.png);
+    background-color:var(--main-color);
+    background-size: auto 20vh;
+    background-position-y: top;
+    background-repeat:repeat-x;
+    background-attachment:fixed;
+    outline: cyan 1px solid;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    margin-top: 1%;
+    margin-bottom: 2%;
+    border: 1px solid var(--dark-color);
+    flex-flow: column nowrap;
+    align-items: center;
+    outline: 1px magenta solid;
+}
+
+.container.title{
+    align-items: center;
+}
+
+.book {
+    min-width: fit-content;
+    padding: 2%;
+    min-height:fit-content;
+    aspect-ratio: 6/1;
+    display: flex;
+    outline: 1px black solid;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+
+}
+
+#author{
+    font-size: 2vmin;
+    min-width: fit-content;
+    text-align: right;
+    margin: 2%;
+    outline: yellow 1px solid;
+}
+
+#title{
+    font-size: 2.5vmin;
+    min-width: fit-content;
+    text-align: left;
+    padding-right: 2vw;
+    outline: 1px orange solid;
+}
