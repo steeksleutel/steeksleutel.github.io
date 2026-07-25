@@ -1,9 +1,13 @@
 :root {
     --main-color: lightslategray;
     --light-color: #f5f5f5;
-    --mediumlight-color: #dcdcdc;
+    --mediumlight-color: #dcdcdcbf;
     --medium-color: #aab2bb;
     --dark-color: #1b2136;
+}
+
+ul {
+    list-style-type: "✦ ";
 }
 
 i, em {
@@ -37,19 +41,21 @@ h1 {
     margin-bottom: -12px;
     text-align: center;
     max-width: max-content;
+    background-color: var(--mediumlight-color);
 }
 
 body {
     background-color: var(--main-color);
     font-family: 'MS UI Gothic', Arial, sans-serif;
-    font-size:3.0vh;
+    font-size:2vmin;
     height:100%;
     margin:1%;
-    background-image:url(img/lace2.png);
+    background-image:url(img/willammorris2.jpg);
     background-color:var(--main-color);
-    background-size: auto 20vh;
-    background-position-y: top;
-    background-repeat:repeat-x;
+    background-size: unset;
+    /* background-position-y: top; */
+    /* background-repeat:repeat-x; */
+    background-repeat: repeat;
     background-attachment:fixed;
     /* outline: cyan 1px solid; */
 
